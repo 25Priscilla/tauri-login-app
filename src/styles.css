@@ -1,0 +1,209 @@
+:root {
+  --bg: #14171c;
+  --bg-line: #1c2027;
+  --ink: #ece8e1;
+  --ink-dim: #9a9d9c;
+  --gold: #c9a15a;
+  --gold-dim: #8a7346;
+  --error: #c4593f;
+  --field-bg: #1a1e24;
+  --field-border: #2b303a;
+  --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  --sans: -apple-system, "Segoe UI", "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background:
+    repeating-linear-gradient(
+      180deg,
+      transparent 0px,
+      transparent 63px,
+      var(--bg-line) 64px
+    ),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.stage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8vh 10vw;
+  gap: 3rem;
+}
+
+.mark {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mark-rule {
+  width: 2px;
+  height: 28px;
+  background: var(--gold);
+}
+
+.mark-word {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.panel {
+  width: 100%;
+  max-width: 360px;
+  padding-top: 2rem;
+  border-top: 1px solid var(--field-border);
+}
+
+.panel h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin: 0 0 0.4rem;
+  color: var(--ink);
+}
+
+.sub {
+  margin: 0 0 2rem;
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+  margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  background: var(--field-bg);
+  border: 1px solid var(--field-border);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  padding: 0.7rem 0.8rem;
+  margin-bottom: 1.1rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #565b64;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: var(--gold);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--ink-dim);
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.check input {
+  accent-color: var(--gold);
+}
+
+.link {
+  font-size: 0.82rem;
+  color: var(--gold-dim);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+button[type="submit"] {
+  background: var(--gold);
+  color: #14171c;
+  border: none;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button[type="submit"]:hover {
+  background: #d6af6a;
+}
+
+button[type="submit"]:disabled {
+  background: var(--gold-dim);
+  cursor: default;
+}
+
+button[type="submit"]:focus-visible,
+input:focus-visible,
+.link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.status {
+  min-height: 1.2rem;
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+}
+
+.status[data-state="error"] {
+  color: var(--error);
+}
+
+.status[data-state="success"] {
+  color: var(--gold);
+}
+
+.hint {
+  color: #565b64;
+  font-size: 0.78rem;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

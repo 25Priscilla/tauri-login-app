@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <div class="mark">
+        <span class="mark-rule"></span>
+        <span class="mark-word">Meridian</span>
+      </div>
+
+      <section class="panel" aria-labelledby="heading">
+        <h1 id="heading">Sign in to continue</h1>
+        <p class="sub">Use the account you set up on this machine.</p>
+
+        <form id="login-form" novalidate>
+          <label for="username">Username</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            autocomplete="username"
+            placeholder="admin"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            placeholder="••••••••"
+            required
+          />
+
+          <div class="row">
+            <label class="check">
+              <input id="remember" type="checkbox" />
+              <span>Stay signed in</span>
+            </label>
+            <a href="#" class="link" id="forgot">Forgot password</a>
+          </div>
+
+          <button type="submit" id="submit-btn">Sign in</button>
+
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <p class="hint">Demo credentials — admin / password</p>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
