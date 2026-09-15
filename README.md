@@ -18,16 +18,16 @@ JavaScript
 Node.js
 
 ## Project Structure
-📸 [Project Structure] (C:\Users\prisc\tauri-login-app\screenshots\project structure.png)
+📸 [Project Structure] (screenshots/project structure.png)
 
 ## Login Interface
-📸 [Login Interface] (C:\Users\prisc\tauri-login-app\screenshots\login interface.png)
+📸 [Login Interface] (screenshots/login interface.png)
 
 ## Invalid Login
-📸 [Invalid Login] (C:\Users\prisc\tauri-login-app\screenshots\invalid login.png)
+📸 [Invalid Login] (screenshots/invalid login.png)
 
 ## Successful Login
-📸 [Successful Login] (C:\Users\prisc\tauri-login-app\screenshots\successful login.png)
+📸 [Successful Login] (screenshots/successful login.png)
 
 ## Setup
 npm install
