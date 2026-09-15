@@ -18,16 +18,16 @@ JavaScript
 Node.js
 
 ## Project Structure
-📸 ![Project Structure](screenshots/project structure.png)
+📸 ![Project Structure](screenshots/project-structure.png)
 
 ## Login Interface
-📸 ![Login Interface](screenshots/login interface.png)
+📸 ![Login Interface](screenshots/login-interface.png)
 
 ## Invalid Login
-📸 ![Invalid Login](screenshots/invalid login.png)
+📸 ![Invalid Login](screenshots/invalid-login.png)
 
 ## Successful Login
-📸 ![Successful Login](screenshots/successful login.png)
+📸 ![Successful Login](screenshots/successful-login.png)
 
 ## Setup
 npm install
